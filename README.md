@@ -57,7 +57,7 @@ python3 run_adapter.py \
     --validation_file dev.csv \
     --test_file test.csv \
     --max_source_length 512 \
-    --max_target_length 256 \
+    --max_target_length 200 \
     --learning_rate 1e-4 \
     --output_dir "tmp/outputs/" \
     --dataloader_num_workers 2 \
@@ -90,7 +90,7 @@ python3 run_adapter.py \
     --validation_file dev.csv \
     --test_file test.csv \
     --max_source_length 512 \
-    --max_target_length 256 \
+    --max_target_length 200 \
     --learning_rate 1e-4 \
     --output_dir "tmp/outputs/" \
     --logging_strategy "epoch" \
@@ -133,6 +133,6 @@ The following table contains ROUGE-L scores of various baseline models tested on
 | Epoch/Iterations     | 100k iter         | 10 epochs        | 10 epochs        | 10 epochs        |
 | Vocab Size           | 50k               | 250112           | 250054           | 64000            |
 | Beam Size            | 4                 | 4                | 5                | 4                |
-| Learning Rate        | 0.15              | 5.00E-04         | 5.00E-04         | 5.00E-04         |
+| Learning Rate        | 0.15              | 5.00E-04         | 1.00E-04         | 5.00E-04         |
 
 
