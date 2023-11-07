@@ -118,21 +118,21 @@ The following table contains ROUGE-L scores of various baseline models tested on
 |-------------------|-------|-------|-------|
 | Pointer Generator | 39.37 | 22.72 | 32.15 |
 | mT5-small         | 37.42 | 20.82 | 30.88 |
-| mBART             | 37.42 | 20.82 | 30.88 |
-| mBART+Adapters    | 37.42 | 20.82 | 30.88 |
-| IndicBART         | 37.42 | 20.82 | 30.88 |
+| mBART             | 41.10 | 24.10 | 33.76 |
+| mBART+Adapters    | 41.41 | 24.00 | 34.00 |
+| IndicBARTSS       | 39.15 | 21.83 | 32.10 |
 
 ***Hyper-parameters***:
 
-| PARAMETERS           | Pointer Generator | mT5              | mBART            | IndicBART        |
+| PARAMETERS           | Pointer Generator | mT5              | mBART            | IndicBARTSS        |
 |----------------------|-------------------|------------------|------------------|------------------|
 | Max source length    | 400               | 512              | 512              | 512              |
-| Max target length    | 100               | 256              | 256              | 256              |
+| Max target length    | 100               | 256              | 200              | 256              |
 | Min target length    | 35                | 30               | 30               | 30               |
 | Batch Size           | 8                 | 2                | 2                | 2                |
 | Epoch/Iterations     | 100k iter         | 10 epochs        | 10 epochs        | 10 epochs        |
-| Vocab Size           | 50k               | 250112           | 250112           | 250112           |
-| Beam Size            | 4                 | 4                | 4                | 4                |
-| Learning Rate        | 0.15              | 5.00E-04          | 5.00E-04          | 5.00E-04          |
+| Vocab Size           | 50k               | 250112           | 250054           | 64000            |
+| Beam Size            | 4                 | 4                | 5                | 4                |
+| Learning Rate        | 0.15              | 5.00E-04         | 5.00E-04         | 5.00E-04         |
 
 
