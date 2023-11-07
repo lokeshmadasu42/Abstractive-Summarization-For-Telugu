@@ -4,19 +4,18 @@ This repository contains the code implementation of paper titled ["***TeSum: Hum
 
 ## Overview
 
+Abstractive summarization is the task of generating a condensed(short) version of an article by preserving the important information. We implemented state-of-the-art baseline models and tested their performance on TeSum data.
 
 ## Data
 
-Please convert the data into required format by running data_format.py.
+TeSum is the first ever, largest human annotated dataset for the Abstractive Summarization task in Telugu. The dataset contains 20,329 high-quality article-summary pairs. Please convert the data into required format before passing it to models (run data_format.py). The train,dev and test splits are 16295, 2017 and 2017.
 
 ## Models
 
-We use modified fork of [huggingface transformers](https://github.com/huggingface/transformers) for fine-tuning the transformer models such as mT5, mBART and IndicBART.
-Please check the following example script to fine-tune and evaluate the models. All the arguments are self-explanatory.  
+We use the modified fork of [huggingface transformers](https://github.com/huggingface/transformers) for fine-tuning the transformer models such as mT5, mBART and IndicBART. Please check the following example script to fine-tune and evaluate the models. All the arguments are self-explanatory.  
 
-bash 
 ```
-python run_summarization.py \
+python3 run_summarization.py \
     --model_name_or_path ai4bharat/IndicBART-XLSum \
     --do_train True \
     --do_eval True\
@@ -44,7 +43,6 @@ python run_summarization.py \
 
 ***Fine-tune mBART+Adapters***
 
-bash
 ```
 python3 run_adapter.py \
     --model_name_or_path facebook/mbart-large-50 \
@@ -113,7 +111,7 @@ We also trained Seq-Seq [pointer generator](https://github.com/atulkum/pointer_s
 
 ## Benchmarks
 
-The following table contains ROUGE-L scores of various baseline models tested on TeSum test set. We use the forked version of [Multilingual ROUGE metric](https://github.com/csebuetnlp/xl-sum/tree/master/multilingual_rouge_scoring) for calculating the ROUGE scores.
+The following table contains ROUGE-L scores of various baseline models tested on TeSum test set. We use the forked version of [Multilingual ROUGE metric](https://github.com/csebuetnlp/xl-sum/tree/master/multilingual_rouge_scoring) for computing the ROUGE scores.
 
 | Model             | R-1   | R-2   | R-L   |
 |-------------------|-------|-------|-------|
@@ -123,7 +121,7 @@ The following table contains ROUGE-L scores of various baseline models tested on
 | mBART+Adapters    | 37.42 | 20.82 | 30.88 |
 | IndicBART         | 37.42 | 20.82 | 30.88 |
 
-***Hyper-parameters***
+***Hyper-parameters***:
 
 | PARAMETERS           | Pointer Generator | mT5              | mBART            | IndicBART        |
 |----------------------|-------------------|------------------|------------------|------------------|
