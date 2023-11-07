@@ -8,7 +8,9 @@ Abstractive summarization is the task of generating a condensed(short) version o
 
 ## Data
 
-TeSum is the first ever, largest human annotated dataset for the Abstractive Summarization task in Telugu. The dataset contains 20,329 high-quality article-summary pairs. Please convert the data into required format before passing it to models (run data_format.py). The train,dev and test splits are 16295, 2017 and 2017.
+TeSum is the first ever, largest human annotated dataset for the Abstractive Summarization task in Telugu. The dataset contains 20,329 high-quality article-summary pairs. The train,dev and test splits are 16295, 2017 and 2017.
+
+**Note**: Please convert the data into required format before passing it to models (run data_format.py).
 
 ## Models
 
@@ -72,7 +74,6 @@ python3 run_adapter.py \
 
 ***Evaluate mBART+Adapters***
 
-bash
 ```
 python3 run_adapter.py \
     --model_name_or_path facebook/mbart-large-50 \
