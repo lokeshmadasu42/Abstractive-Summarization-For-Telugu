@@ -48,8 +48,8 @@ python3 run_summarization.py \
 ```
 python3 run_adapter.py \
     --model_name_or_path facebook/mbart-large-50 \
-    --do_train \
-    --do_eval \
+    --do_train True\
+    --do_eval True\
     --do_predict False\
     --train_adapter \
     --lang te_IN \
@@ -79,7 +79,7 @@ python3 run_adapter.py \
     --model_name_or_path facebook/mbart-large-50 \
     --do_train False\
     --do_eval False\
-    --do_predict \
+    --do_predict True\
     --train_adapter \
     --load_adapter summarization \
     --adapter_config "pfeiffer" \
