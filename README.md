@@ -4,7 +4,7 @@ This repository contains the code implementation of paper titled ["***TeSum: Hum
 
 ## Overview
 
-Abstractive summarization is the task of generating a condensed(short) version of an article by preserving the important information. We implemented state-of-the-art baseline models and tested their performance on TeSum data.
+Abstractive summarization is the task of generating a short summary of an article by preserving the important information. We implemented state-of-the-art baseline models and tested their performance on TeSum data.
 
 ## Data
 
